@@ -32,6 +32,7 @@ const App = () => {
     <div className="App">
       <h1>Data Structures and Algorithms Review!</h1>
       <h1>Test your skills &#128572;</h1>
+      <h3>This is an interactive review to see how much you know about DSA!</h3>
       <h3>Click on card to see answer and click on "Next Card" for next card!</h3>
       <br />
       <h3>Card {cardIndex + 1} of {flashcards.length}</h3>
