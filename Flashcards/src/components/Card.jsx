@@ -1,26 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Card = (props) => {
-    const [cardFlipped, setCardFlipped] = useState(props.flipped);
-    const card = props.card;
+const Card = ({ card, flipped, setFlipped }) => {
+  
+  const handleFlipCard = () => {
+    setFlipped(!flipped);
+  };
 
-    const handleFlipCard = () => {
-        setCardFlipped(!cardFlipped);
-    };
-
-    return (
-        <div className="card" onClick={handleFlipCard}>
-            <div className={`card-inner ${cardFlipped ? "flipped" : ""}`}>
-                <div className="card-front">
-                    {card.question}
-                </div>
-                <div className="card-back">
-                    {card.answer}
-                </div>
-            </div>
+  return (
+    <div className="card" onClick={handleFlipCard}>
+      <div className={`card-inner ${flipped ? "flipped" : ""}`}>
+        <div className="card-front">
+          {card.question}
         </div>
-    );
+        <div className="card-back">
+          {card.answer}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Card;
-
